@@ -1,0 +1,20 @@
+ALGORITHM Sort_insertion
+VAR
+ i,j,key:INTEGER;
+ array : ARRAY_OF INTEGER[5]=[12, 11, 13, 5, 6];
+
+BEGIN
+FOR i FROM 1 TO array.length-1 STEP step  DO
+ key =array[i]
+ j=i-1
+ 
+ WHILE (j >= 0 AND arr[j] > key) DO
+     arr[j + 1] = arr[j];    
+        j = j - 1;   
+          
+ END_WHILE
+ arr[j + 1] = key; 
+END_FOR
+ Write(array)
+
+END

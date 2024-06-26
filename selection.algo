@@ -1,0 +1,21 @@
+ALGORITHM Selection_Sort
+VAR
+         i,j,Temp,min:INTEGER;
+             array : ARRAY_OF INTEGER[N];
+
+
+BEGIN
+    FOR i FROM 0 TO  array.length -1 STEP step  DO
+    min := i;
+       FOR j FROM i + 1 TO array.length -1  STEP step DO
+         IF array[j] < array[min] THEN
+         min := j;
+         Temp=array[min];
+         array[min]:=array[i];
+         array[i]:=Temp;
+         min=i;
+         END IF
+       END FOR
+  END_FOR
+END
+  
